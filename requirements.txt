@@ -1,0 +1,9 @@
+django
+django-appconf
+django-extensions
+django-htmlmin
+django-storages
+boto3
+docutils
+gunicorn
+psycopg2-binary
