@@ -23,4 +23,4 @@
 
 ### Authors
 
-@marfyl 
+- github.com/marfyl 
