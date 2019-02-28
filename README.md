@@ -2,6 +2,7 @@
 
 
 # django-curriculum-landing
+=====================================
 
  - A clean, simple, curriculum vitae CV resume landing page with contact form, email delivery, continuous integration and delivery with Travis CI in Heroku Cloud Application Platform, built with Python/Django.
  - Google Analytics integration if you define environ var ``ANALYTICS_CODE``.
@@ -38,7 +39,7 @@ If you want to configure your Google Analytics account, just set environ var ``A
 
 If you want to configure your AWS CloudFront account, just set environ var ``AWS_S3_ACTIVE`` to ``"True"`` and your AWS credentials.
 
-        export AWS_S3_ACTIVE="True"
+        export AWS_S3_ACTIVE='True'
         export CLOUDFRONT_DOMAIN=''
         export CLOUDFRONT_ID=''
         export AWS_ACCESS_KEY_ID=''
@@ -49,8 +50,9 @@ If you want to configure your AWS CloudFront account, just set environ var ``AWS
 
 If you want to configure Sendgrid to receive an email after contact form is filled correctly.
 
-        export SENDGRID_USERNAME="USER"
+        export SENDGRID_USERNAME='USER'
         export SENDGRID_PASSWORD='PASS'
+        export ADMIN_EMAIL='email@example.com'
         
 ## Heroku
 
