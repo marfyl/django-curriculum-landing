@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 
 import os
 from .logging import LOGGING  # noqa
-from .apps import *  # noqa
 from .components import *  # noqa
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -38,6 +37,19 @@ ADMINS = (
 MANAGERS = ADMINS
 
 ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOSTS', 'localhost')]
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'django_extensions',
+    'storages',
+    'landing',
+]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
