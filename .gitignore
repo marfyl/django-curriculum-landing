@@ -1,20 +1,6 @@
-# Python object files
-/media/
-/bds/
 *.pyc
-# .po compiled files
 *.mo
 *~
-# OSX meta files
-.DS_Store
-# Local settings for django
-exolever/local.py
-exolever/*.sh
-/media/
-/staticfiles/
-/run/
-/protected/
-/bower_components/
 __pycache__
 *.pyc
 *.mo
@@ -27,3 +13,14 @@ __pycache__
 *.sh
 *.log
 *.env
+
+*.sublime-project
+*.sublime-workspace
+.vscode/
+
+.DS_Store
+/media/
+/staticfiles/
+/run/
+/protected/
+/bower_components/
