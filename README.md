@@ -2,7 +2,9 @@
 
 
 # django-curriculum-landing
-=====================================
+
+
+## Features
 
  - A clean, simple, curriculum vitae CV resume landing page with contact form, email delivery, continuous integration and delivery with Travis CI in Heroku Cloud Application Platform, built with Python/Django.
  - Google Analytics integration if you define environ var ``ANALYTICS_CODE``.
