@@ -3,6 +3,8 @@
 
 # django-curriculum-landing
 
+This is my personal curriculum vitae website. https://marfyl.herokuapp.com/
+
 
 ## Features
 
@@ -50,11 +52,11 @@ If you want to configure your AWS CloudFront account, just set environ var ``AWS
 
 ## Sendgrid
 
-If you want to configure Sendgrid to receive an email after contact form is filled correctly.
-
-        export SENDGRID_USERNAME='USER'
-        export SENDGRID_PASSWORD='PASS'
+If you want to configure Sendgrid to receive an email after contact form is filled correctly. The contact information will be sent to ``ADMIN_EMAIL``
+        
         export ADMIN_EMAIL='email@example.com'
+        export SENDGRID_USERNAME='XXX'
+        export SENDGRID_PASSWORD='YYY'
         
 ## Heroku
 
@@ -78,4 +80,4 @@ You can run the tests manually if you want.
 
 ### Authors
 
-- [github@marfyl](https://github.com/marfyl/)
+- marfyl - [github@marfyl](https://github.com/marfyl/)
