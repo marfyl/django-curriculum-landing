@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/marfyl/django-curriculum-landing.svg?branch=master)](https://travis-ci.org/marfyl/django-curriculum-landing) [![Coverage Status](https://coveralls.io/repos/github/marfyl/django-curriculum-landing/badge.svg?branch=master)](https://coveralls.io/github/marfyl/django-curriculum-landing?branch=master) [![Requirements Status](https://requires.io/github/marfyl/django-curriculum-landing/requirements.svg?branch=master)](https://requires.io/github/marfyl/django-curriculum-landing/requirements/?branch=master)
+[![Build Status](https://travis-ci.org/marfyl/django-curriculum-landing.svg?branch=master)](https://travis-ci.org/marfyl/django-curriculum-landing) [![Coverage Status](https://coveralls.io/repos/github/marfyl/django-curriculum-landing/badge.svg?branch=master)](https://coveralls.io/github/marfyl/django-curriculum-landing?branch=master) [![Requirements Status](https://requires.io/github/marfyl/django-curriculum-landing/requirements.svg?branch=master)](https://requires.io/github/marfyl/django-curriculum-landing/requirements/?branch=master) [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=marfyl_django-curriculum-landing&metrmarfyl_django-curriculum-landingic=alert_status)](https://sonarcloud.io/dashboard/index/marfyl_django-curriculum-landing)
 
 
 # django-curriculum-landing
@@ -73,7 +73,7 @@ If you have branch specific options, Travis CI will automatically figure out whi
 
 ## Requirements
 
-All requirements are listed in ``requirements.txt``. You can install them just running::
+All requirements are listed in ``requirements.txt``. You can install them just running:
 
         pip install -r requirements.txt
         
