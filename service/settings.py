@@ -99,3 +99,9 @@ USE_L10N = True
 USE_TZ = True
 
 HTML_MINIFY = True
+
+
+if not DEBUG:
+    SECURE_SSL_REDIRECT = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
