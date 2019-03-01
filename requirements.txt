@@ -1,6 +1,7 @@
 django
 django-htmlmin
 django-storages
+django-extensions
 boto3
 gunicorn
 psycopg2
