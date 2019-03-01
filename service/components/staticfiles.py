@@ -7,13 +7,13 @@ AWS_S3_ACTIVE = eval(os.environ.get('AWS_S3_ACTIVE', 'False'))
 
 if AWS_S3_ACTIVE:
     # CDN
-    CLOUDFRONT_DOMAIN = os.environ.get('CLOUDFRONT_DOMAIN', '')
-    CLOUDFRONT_ID = os.environ.get('CLOUDFRONT_ID', '')
+    CLOUDFRONT_DOMAIN = os.environ.get('CLOUDFRONT_DOMAIN')
+    CLOUDFRONT_ID = os.environ.get('CLOUDFRONT_ID')
 
     # AWS
-    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID', '')
-    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY', '')
-    AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME', '')
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
     AWS_S3_CUSTOM_DOMAIN = CLOUDFRONT_DOMAIN
     AWS_DEFAULT_ACL = None
 
