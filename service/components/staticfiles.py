@@ -15,12 +15,12 @@ if AWS_S3_ACTIVE:
 
     # STATIC
     STATICFILES_LOCATION = 'static'
-    STATIC_URL = '//{}/{}/'.format(AWS_S3_CUSTOM_DOMAIN, STATICFILES_LOCATION)
+    STATIC_URL = 'https://{}/{}/'.format(AWS_S3_CUSTOM_DOMAIN, STATICFILES_LOCATION)
     STATICFILES_STORAGE = 'landing.storages.StaticStorage'
 
     # MEDIA
     MEDIAFILES_LOCATION = 'media'
-    MEDIA_URL = '//{}/{}/'.format(AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
+    MEDIA_URL = 'https://{}/{}/'.format(AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
     DEFAULT_FILE_STORAGE = 'landing.storages.MediaStorage'
 
 else:
