@@ -1,0 +1,71 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="You will never be as young as today">
+  <meta name="author" content="marfyl.herokuapp.com">
+  <meta name="robots" content="noindex, follow">
+
+  <title>marfyl.herokuapp.com</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="{% static 'landing/img/favicon.ico' %}">
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'landing/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <!-- Custom fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <!-- Custom styles -->
+  <link href="{% static 'landing/css/resume.min.css' %}" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  {% include 'landing/navbar.html' %}
+
+  <div class="container-fluid p-0">
+    {% include 'landing/messages.html' %}    
+    {% include 'landing/about.html' %}
+    <hr class="m-0">
+    {% include 'landing/experience.html' %}
+    <hr class="m-0">
+    {% include 'landing/education.html' %}        
+    <hr class="m-0">
+    {% include 'landing/skills.html' %}    
+    <hr class="m-0">
+    {% include 'landing/contact.html' %} 
+    {% include 'landing/cookies.html' %}
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'landing/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'landing/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'landing/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+  <!-- GitHub button -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!-- Custom scripts for this template -->
+  <script src="{% static 'landing/js/resume.min.js' %}"></script>
+  <script src="{% static 'landing/js/cookie-alert.min.js' %}"></script>
+
+  {% if ANALYTICS_CODE %}
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ ANALYTICS_CODE }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', '{{ ANALYTICS_CODE }}');
+  </script>
+  {% endif %}
+
+</body>
+
+</html>
