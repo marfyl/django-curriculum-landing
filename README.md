@@ -47,11 +47,10 @@ If you want to configure your AWS CloudFront account, just configure the environ
         
 and then your AWS credentials.
 
-        export CLOUDFRONT_DOMAIN=''
-        export CLOUDFRONT_ID=''
         export AWS_ACCESS_KEY_ID=''
         export AWS_SECRET_ACCESS_KEY=''
         export AWS_STORAGE_BUCKET_NAME=''
+        export AWS_S3_CUSTOM_DOMAIN=''
 
 ## Sendgrid
 
