@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/marfyl/django-curriculum-landing.svg?branch=master)](https://travis-ci.org/marfyl/django-curriculum-landing) [![Coverage Status](https://coveralls.io/repos/github/marfyl/django-curriculum-landing/badge.svg?branch=master)](https://coveralls.io/github/marfyl/django-curriculum-landing?branch=master) [![Requirements Status](https://requires.io/github/marfyl/django-curriculum-landing/requirements.svg?branch=master)](https://requires.io/github/marfyl/django-curriculum-landing/requirements/?branch=master)
+[![Build Status](https://travis-ci.org/marfyl/django-curriculum-landing.svg?branch=master)](https://travis-ci.org/marfyl/django-curriculum-landing) [![Coverage Status](https://coveralls.io/repos/github/marfyl/django-curriculum-landing/badge.svg?branch=master)](https://coveralls.io/github/marfyl/django-curriculum-landing?branch=master) [![Requirements Status](https://requires.io/github/marfyl/django-curriculum-landing/requirements.svg?branch=master)](https://requires.io/github/marfyl/django-curriculum-landing/requirements/?branch=master) [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=marfyl_django-curriculum-landing&metrmarfyl_django-curriculum-landingic=alert_status)](https://sonarcloud.io/dashboard/index/marfyl_django-curriculum-landing)
 
 
 # django-curriculum-landing
@@ -9,23 +9,23 @@ This is my personal curriculum vitae website. https://marfyl.herokuapp.com/
 ## Features
 
  - A clean, simple, curriculum vitae CV resume landing page with contact form, email delivery, continuous integration and delivery with Travis CI in Heroku Cloud Application Platform, built with Python/Django.
- - Google Analytics integration if you define environ var ``ANALYTICS_CODE``.
- - Sendgrid to deliver transactional emails. You will receive an email after ContactForm is sent correctly.
- - Amazon CloudFront CDN for serving statics. Each time you call the command ``python manage.py collectstatic`` command static files will be uploaded to AWS S3 bucket. If you don't set this environ var Django will serve your static files.
- - Auto deploy in Heroku Cloud Application Platform with Travis CI after master branch have changes and last build was successful.
+ - ``Google Analytics`` integration if you define environ var ``ANALYTICS_CODE``.
+ - You can configure ``Sendgrid`` to deliver transactional emails. You will receive an email after ContactForm is sent correctly.
+ - Amazon ``CloudFront`` CDN for serving statics. Each time you run ``collectstatic`` command, static files will be uploaded to AWS S3 bucket. If you don't set this environ var Django will serve your static files.
+ - Auto deploy in ``Heroku`` Cloud Application Platform with ``Travis CI`` after ``master`` branch have changes and last build was successful.
 
 ## Environment
 
 Create a new environment, in the WORKON_HOME.
         
-        pip install -g virtualenvwrapper
-        mkvirtualenv $VIRTUAL_ENV
+        pip install virtualenvwrapper
+        mkvirtualenv $VIRTUAL_ENV_NAME
         
 All the private or environment-dependant settings in ``settings.py`` are kept as environmental variables. 
 We need to set these variables everytime we enter this virtual environment, virtualenvwrapper does this with a postactivate script. 
 Edit this file:
         
-        vim $VIRTUAL_ENV/bin/postactivate
+        vim $VIRTUAL_ENV_NAME/bin/postactivate
 
 ## Database
 
@@ -41,9 +41,12 @@ If you want to configure your Google Analytics account, just set environ var ``A
 
 ## Amazon CloudFront
 
-If you want to configure your AWS CloudFront account, just set environ var ``AWS_S3_ACTIVE`` to ``"True"`` and your AWS credentials.
+If you want to configure your AWS CloudFront account, just configure the environ var ``AWS_S3_ACTIVE``
 
         export AWS_S3_ACTIVE='True'
+        
+and then your AWS credentials.
+
         export CLOUDFRONT_DOMAIN=''
         export CLOUDFRONT_ID=''
         export AWS_ACCESS_KEY_ID=''
@@ -52,11 +55,14 @@ If you want to configure your AWS CloudFront account, just set environ var ``AWS
 
 ## Sendgrid
 
-If you want to configure Sendgrid to receive an email after contact form is filled correctly. The contact information will be sent to ``ADMIN_EMAIL``
+If you want to configure Sendgrid to receive an email each time contact form is filled correctly. 
+
+        export SENDGRID_USERNAME=''
+        export SENDGRID_PASSWORD=''
+
+You can configure who receive the contact information with ``ADMIN_EMAIL`` environ var.
         
         export ADMIN_EMAIL='email@example.com'
-        export SENDGRID_USERNAME='XXX'
-        export SENDGRID_PASSWORD='YYY'
         
 ## Heroku
 
@@ -67,7 +73,7 @@ If you have branch specific options, Travis CI will automatically figure out whi
 
 ## Requirements
 
-All requirements are listed in ``requirements.txt``. You can install them just running::
+All requirements are listed in ``requirements.txt``. You can install them just running:
 
         pip install -r requirements.txt
         
