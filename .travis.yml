@@ -24,7 +24,6 @@ env:
 # Install pip dependencies
 install:
   - pip install -r requirements.txt
-  - pip install coveralls
 
 # Create test database
 before_script:
@@ -34,7 +33,6 @@ before_script:
 script:
   - python manage.py test
   - sonar-scanner
-  - coverage run --source=landing manage.py test
 
 # Deploy to heroku server
 deploy:
@@ -45,5 +43,3 @@ deploy:
   on:
     repo: marfyl/django-curriculum-landing
     branch: master
-after_success:
-  - coveralls
