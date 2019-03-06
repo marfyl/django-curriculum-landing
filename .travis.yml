@@ -33,7 +33,7 @@ before_script:
 # Run the unit test
 script:
   - python manage.py test
-  - sonar-scanner -Dsonar.verbose=true -X
+  - sonar-scanner
   - coverage run --source=landing manage.py test
 
 # Deploy to heroku server
