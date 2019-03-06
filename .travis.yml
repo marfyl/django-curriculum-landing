@@ -32,7 +32,7 @@ before_script:
 # Run the unit test
 script:
   - python manage.py test
-  - sonar-scanner -X -Dsonar.projectVersion=1.0.0
+  - sonar-scanner -Dsonar.verbose=true -X
 
 # Deploy to heroku server
 deploy:
