@@ -13,10 +13,10 @@ python: 3.6
 # Addons
 addons:
   postgresql: '9.6'
-  # sonarcloud:
-  #   organization: "marfyl-github"
-  #   token:
-  #    secure: "X15m2K10UvBo2wdEehUHCCEaxnTq71ZlYUwJcwZLq7yudDrEhvySYtA0UGfXpgYsHN2+Z36lO6jJk/yrxrhQ8iUomY2WL05FNE1SVF8LDh2d34hleL68201LUQnav6fil4/86Fn4Kai1/e/VTSp9YcB4mvFailehXAFRWrjEZcDkA/sxSxBIF54kfVJ87ZksvVHpYZnJAuDaz3JCaW2Ggd4wLSteUr0i4iDx9Zhx7usHjis0mnJjE+iMJvh0aLq2DQ7T0K8OEmjCytdNMh1NBO3l7teYJBBt6+LyBJU4j0vmC7hSh36EpxxdeDVd7HHKHN/uS3kqMoYGtQM30DnoK0Y+8y684ixmVTxIaFS+vsSJXAqbyRtHf/n7fP5AzLmqq9Y3Wp4ZbtdiTyVOkM9hqpyNScZX+/n5jvCBJsw/AQjwbOQptLhFFJs0WjcH2NQ6YDLVLr4jreBuaOi89tSHaR+12CA3KnFXeCQnOBUFz7MFwNpN8YFBxJrqblEfslSziTJ403BZ86LC2fW0hsvMJNl3K2xFajaBlwVm8foVx1te/4wKgezkh1DEqVxrWc+8y6ed+3qiH5+kfAesFvwy+fJlnYv8LOyQWJnJwaGqcLp3C9BUjoaWv2CneXBbRyAkChnr+6pPixqrUt2C6utEcmAJoiSdcxxhxfhpAkBhocg="
+  sonarcloud:
+    organization: "marfyl-github"
+    token:
+      secure: "X15m2K10UvBo2wdEehUHCCEaxnTq71ZlYUwJcwZLq7yudDrEhvySYtA0UGfXpgYsHN2+Z36lO6jJk/yrxrhQ8iUomY2WL05FNE1SVF8LDh2d34hleL68201LUQnav6fil4/86Fn4Kai1/e/VTSp9YcB4mvFailehXAFRWrjEZcDkA/sxSxBIF54kfVJ87ZksvVHpYZnJAuDaz3JCaW2Ggd4wLSteUr0i4iDx9Zhx7usHjis0mnJjE+iMJvh0aLq2DQ7T0K8OEmjCytdNMh1NBO3l7teYJBBt6+LyBJU4j0vmC7hSh36EpxxdeDVd7HHKHN/uS3kqMoYGtQM30DnoK0Y+8y684ixmVTxIaFS+vsSJXAqbyRtHf/n7fP5AzLmqq9Y3Wp4ZbtdiTyVOkM9hqpyNScZX+/n5jvCBJsw/AQjwbOQptLhFFJs0WjcH2NQ6YDLVLr4jreBuaOi89tSHaR+12CA3KnFXeCQnOBUFz7MFwNpN8YFBxJrqblEfslSziTJ403BZ86LC2fW0hsvMJNl3K2xFajaBlwVm8foVx1te/4wKgezkh1DEqVxrWc+8y6ed+3qiH5+kfAesFvwy+fJlnYv8LOyQWJnJwaGqcLp3C9BUjoaWv2CneXBbRyAkChnr+6pPixqrUt2C6utEcmAJoiSdcxxhxfhpAkBhocg="
 
 env:
   - DATABASE_URL=postgres://postgres:postgres@localhost:5432/travis_ci_test
@@ -32,7 +32,7 @@ before_script:
 # Run the unit test
 script:
   - python manage.py test
-  # - sonar-scanner -X
+  - sonar-scanner -X -Dsonar.projectVersion=1.0.0
 
 # Deploy to heroku server
 deploy:
