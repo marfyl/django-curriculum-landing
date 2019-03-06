@@ -3,7 +3,7 @@ import os
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-AWS_S3_ACTIVE = eval(os.environ.get('AWS_S3_ACTIVE', 'True'))
+AWS_S3_ACTIVE = eval(os.environ.get('AWS_S3_ACTIVE', 'False'))
 
 if AWS_S3_ACTIVE:
     # AWS
@@ -12,7 +12,7 @@ if AWS_S3_ACTIVE:
     AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
     AWS_S3_CUSTOM_DOMAIN = os.environ.get('AWS_S3_CUSTOM_DOMAIN')
     AWS_DEFAULT_ACL = None
-    AWS_IS_GZIPPED = True
+    AWS_IS_GZIPPED = False
     AWS_S3_OBJECT_PARAMETERS = {
         'CacheControl': 'max-age=864000',
     }
