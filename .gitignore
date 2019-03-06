@@ -13,11 +13,11 @@ __pycache__
 *.sh
 *.log
 *.env
-
 *.sublime-project
 *.sublime-workspace
 .vscode/
-
+.coverage
+.scannerwork/
 .DS_Store
 /media/
 /staticfiles/
