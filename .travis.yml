@@ -8,11 +8,7 @@ language: python
 cache: pip
 
 # Set the python versions
-python:
-  - 2.7
-  - 3.4
-  - 3.5
-  - 3.6
+python: 3.6
 
 # Addons
 addons:
@@ -42,7 +38,7 @@ script:
 deploy:
   provider: heroku
   api_key:
-    secure: SECURE_KEY
+    secure: "hxLV8wZD2iOMYKudbYt4yZ7fJ2NSEe+BCjPBfxDMzAImnJUoarl8lyyigt8WPGo/LNbFsKwf6glMvK9cACwFzuUTJp9O1NcPPmV+ykEa5LC6k9Z7OSTHL/TqhcWpMjzH/AV0neg9vlxQHtJhGynxBvxGdiXIaNX0OkdaFAnqdcyYK813M50F7Ui7kclxdyNbnUMniyc83x9uzKkewedEUXk1ZnpekICnAS8br4b0QYHRFyxF5AQTyRqprRMh4km1lNNQxaqRLs3WP85D6sFX61Ae98Nnek8bl9DZqsvTwP2ERqjUDmW+uesJkMnN8nq0KvJLt+c3F25ZJ5ZVU5cdez+7LaibkilQXZsi/csh3S93biWtuf2JXo3by9Fku+OieqQ1mOC7t/9EhUTeVmm60ysoWr61FUHWeWOIvsyVdsqWWtcwOMn2c0UoncKlqiEiQhZwVmq13dr2rOyMbP+mJyNaC7r/U66+l1UGxaAQSZt0gVcyLLv6WxyTX5OFquId+/aOrR1ALzCqAFHJz9gOgTVTaEXWw5T38jn+HSZMxeWmfL9O+8qiEfS0OPA3PlROWkMPNIRbLugZ2rPxRIH2ESRY0TnXhgrksQ3S7WhHdSTvWFYSlzHJbwDiBw3nY92qROwkH4zizzzt1MFmZ7xtiKajYlZKdDlZIyDLggCpaYw="
   app: marfyl
   on:
     repo: marfyl/django-curriculum-landing

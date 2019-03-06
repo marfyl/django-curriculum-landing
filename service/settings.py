@@ -21,10 +21,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY', '')
+SECRET_KEY = os.environ.get('SECRET_KEY', 'xd4r8j@yyu@w!j5t61njzkx&ver08ib3-swzs68ps0tq4m8qs5')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = eval(os.environ.get('DEBUG', 'True'))
+
+ADMIN_PANEL_ACTIVE = eval(os.environ.get('ADMIN_PANEL_ACTIVE', 'True'))
 
 ANALYTICS_CODE = os.environ.get('ANALYTICS_CODE', '')
 
@@ -99,3 +101,9 @@ USE_L10N = True
 USE_TZ = True
 
 HTML_MINIFY = True
+
+
+if not DEBUG:
+    SECURE_SSL_REDIRECT = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
