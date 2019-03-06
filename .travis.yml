@@ -43,3 +43,5 @@ deploy:
   on:
     repo: marfyl/django-curriculum-landing
     branch: master
+after_success:
+  - coveralls
