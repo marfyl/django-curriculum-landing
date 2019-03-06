@@ -81,7 +81,7 @@ All requirements are listed in ``requirements.txt``. You can install them just r
 
 You can run the tests manually if you want.
 
-    python manage.py test
+        python manage.py test
 
 
 ### Authors
